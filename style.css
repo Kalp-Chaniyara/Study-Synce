@@ -25,11 +25,9 @@ body {
     padding: 0.1rem;
 }
 
-/* .header{
-    width: 100%;
-    background-color: aqua;
-    padding: 2em;
-} */
+.header{
+    margin-bottom: 1.5rem;
+}
 
 .header-content {
     max-width: 1070px;
@@ -119,4 +117,146 @@ body {
 .Menu-Icon{
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.Main-Content{
+    max-width: 1070px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.6rem;
+    /* border: 2px solid black; */
+}
+
+.Left-Content{
+    /* border: 2px solid blue; */
+    /* padding-top: 4.5rem; */
+    text-align: center;
+    animation: slideFromLeft 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideFromLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section-lable{
+    /* text-align: left; */
+    /* margin-bottom: 1.8rem; */
+    color: var(--link-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.section-title{
+    /* text-align: left; */
+    padding: 1.1rem;
+    padding-left: 0;
+    /* font-size: 3em;     */
+}
+
+.section-discription{
+    /* text-align: left; */
+    color: var(--gray);
+    font-size: 1.3rem;
+    /* width: 90%; */
+}
+
+.button-group{
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.Start-Button{
+    /* border: 2px solid black; */
+    border-radius: 0.375rem;
+    padding: 0.7rem;
+    color: var(--background-color);
+    font-weight: 600;
+    background-color: var(--primary-color);
+}
+
+.Start-Button:hover{
+    background-color: #5254f8;
+}
+
+.Tour-Button{
+    /* border: 2px solid black; */
+    border-radius: 0.375rem;
+    padding: 0.7rem;
+    color: var(--background-color);
+    font-weight: 600;
+    background-color: var(--dark-gray);
+}
+
+.Tour-Button:hover{
+    background-color: var(--gray);
+}
+
+.Right-Content{
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Image-container{
+    border: none;
+    border-radius: 1.225rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.1);
+    height: 60vh;
+    /* width: 60vw; */
+}
+
+.Hero-Images{
+    height: 100%;
+    width: 100%;
+
+}
+
+@media screen and (min-width:760px) {
+     .Main-Content{
+        flex-direction: row;
+    }
+
+    .Left-Content{
+        width: 50%;
+        text-align: left;
+        padding-top: 4rem;
+    }
+    .section-title{
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+    .section-discription{
+        width: 80%;
+        padding-bottom: 2rem;
+    }
+    .button-group{
+        justify-content: left;
+    }
+    .Right-Content{
+        width: 50%;
+    }
+    .Image-container{
+        height: 90%;
+        width: 100%;
+    }
+    .Hero-Images9{
+        height: 100%;
+        width: 100%;
+    }
 }
